@@ -42,9 +42,9 @@ if (!file_exists($dbFile)) {
         <span style="flex:1"></span>
         <?php if ($user): ?>
             <span style="margin-right:16px;">👤 <?php echo htmlspecialchars($user['username']); ?></span>
-            <a href="admin/dashboard.php" class="md-btn" style="background:#1976d2;color:#fff;padding:6px 18px;font-size:15px;">进入后台</a>
+            <a href="admin/dashboard.php" class="md-btn" style="background:#1976d2;color:#fff;padding:6px 18px;font-size:15px;text-decoration:none;">进入后台</a>
         <?php else: ?>
-            <a href="admin/index.php" class="md-btn" style="background:#fff;color:#1976d2 !important;border:1px solid #1976d2;padding:6px 18px;font-size:15px;">登录</a>
+            <a href="admin/index.php" class="md-btn" style="background:#fff;color:#1976d2 !important;border:1px solid #1976d2;padding:6px 18px;font-size:15px;text-decoration:none;">登录</a>
         <?php endif; ?>
     </div>
     <div class="container align-center">
