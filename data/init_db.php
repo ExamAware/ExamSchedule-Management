@@ -1,5 +1,12 @@
 <?php
-$db = new SQLite3(__DIR__ . '/exam.db');
+$dbFile = __DIR__ . '/exam.db';
+if (file_exists($dbFile)) {
+    echo "数据库已存在，拒绝重复初始化。<br>";
+    echo "<a href=\"../index.php\">返回首页</a>";
+    exit;
+}
+
+$db = new SQLite3($dbFile);
 $db->exec('CREATE TABLE IF NOT EXISTS configs (
     id TEXT PRIMARY KEY,
     content TEXT NOT NULL,
@@ -51,3 +58,4 @@ echo "数据库初始化完成<br>";
 echo "管理员账号：admin<br>";
 echo "管理员密码：$plainPass<br>";
 echo "示例配置ID：demo<br>";
+echo "<a href=\"../index.php\">进入首页</a>";

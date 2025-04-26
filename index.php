@@ -1,6 +1,13 @@
 <?php
 session_start();
 $user = $_SESSION['user'] ?? null;
+
+// 检查数据库是否存在，不存在则跳转初始化
+$dbFile = __DIR__ . '/data/exam.db';
+if (!file_exists($dbFile)) {
+    header('Location: data/init_db.php');
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
