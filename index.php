@@ -63,10 +63,6 @@ if (!file_exists($dbFile)) {
             </button>
         </form>
     </div>
-    <div class="footer">
-        <span class="material-icons" style="vertical-align:middle;">info</span>
-        Powered by ExamSchedule-Management
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
     <script>
@@ -96,5 +92,9 @@ if (!file_exists($dbFile)) {
             });
     });
     </script>
+    <div class="footer" style="position:fixed;bottom:0;width:100%;background:#f5f7fa;padding:10px 0;text-align:center;">
+        <span class="material-icons" style="vertical-align:middle;">info</span>
+        Powered by ExamSchedule-Management
+    </div>
 </body>
 </html>
