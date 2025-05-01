@@ -22,9 +22,26 @@ if (isset($_SESSION['user'])) {
         .input-group { margin-bottom: 24px; }
         label { display: block; margin-bottom: 8px; color: #1976d2; }
         input[type="text"], input[type="password"] { width: 100%; padding: 10px; border: 1px solid #b3c6e0; border-radius: 4px; font-size: 16px; }
+        .home-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #fff;
+            color: #1976d2;
+            border: 1px solid #1976d2;
+            padding: 6px 18px;
+            font-size: 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .home-btn:hover {
+            background: #e3f2fd;
+        }
     </style>
 </head>
 <body>
+    <a href="../index.php" class="home-btn">主页</a>
     <div class="navbar">
         <span class="material-icons">admin_panel_settings</span>
         管理员后台
