@@ -93,7 +93,7 @@ while ($row = $res->fetchArray(SQLITE3_ASSOC)) {
             <?php foreach ($users as $row): ?>
                 <tr>
                     <td><?php echo htmlspecialchars($row['username']); ?></td>
-                    <td><?php echo htmlspecialchars($row['role']); ?></td>
+                    <td><?php echo $row['role'] === 'admin' ? '管理员' : '普通用户'; ?></td>
                     <td class="actions">
                         <a href="edit_user.php?id=<?php echo urlencode($row['id']); ?>" class="md-btn"><span class="material-icons">edit</span></a>
                         <?php if ($row['username'] !== 'admin'): ?>

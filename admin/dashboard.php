@@ -82,7 +82,7 @@ $user = $_SESSION['user'];
         </span>
         <a href="../index.php" class="home-btn"><span class="material-icons">home</span>主页</a>
         <span class="user-info">
-            当前用户：<?php echo htmlspecialchars($user['username']); ?> (<?php echo $user['role']; ?>)
+            当前用户：<?php echo htmlspecialchars($user['username']); ?> (<?php echo $user['role'] === 'admin' ? '管理员' : '普通用户'; ?>)
         </span>
         <a href="logout.php" class="logout"><span class="material-icons" style="vertical-align:middle;">logout</span> 退出</a>
     </div>
